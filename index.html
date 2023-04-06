@@ -1,37 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Age calculator app</title>
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/images/favicon-32x32.png"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Climate+Crisis&family=Indie+Flower&family=Montserrat&family=Poppins:ital,wght@0,400;1,900&family=Sacramento&display=swap" rel="stylesheet">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+        <title>Frontend Mentor | Age calculator app</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="top-section">
+                <div class="day">
+                    <label for="day">DAY</label>
+                    <input type="text" id="day" name="day" placeholder="DD" />
+                </div>
 
-  Day
-  DD
+                <div class="month">
+                    <label for="month">MONTH</label>
+                    <input
+                        type="text"
+                        id="month"
+                        name="month"
+                        placeholder="MM"
+                    />
+                </div>
 
-  Month
-  MM
+                <div class="year">
+                    <label for="year">YEAR</label>
+                    <input
+                        type="text"
+                        id="year"
+                        name="year"
+                        placeholder="YYYY"
+                    />
+                </div>
+            </div>
 
-  Year
-  YYYY
+            <div class="imgArrow">
+                <hr />
+                <img src="./assets/images/icon-arrow.svg" alt="arrow img" />
+            </div>
 
-  -- years
-  -- months
-  -- days
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+           
+            <div class="current">
+              <div class="currentYear">
+                  <div class="currentYearData"><i><strong>- -</div>
+                    <div>years</i></strong></div>
+              </div>
+
+              <div class="currentMonth">
+                  <div class="currentMonthData"><i><strong>- -</div>
+                    <div>months</i></strong></div>
+              </div>
+
+              <div class="currentDay">
+                <div class="currentDayData"><i><strong>- -</div>
+                <div>days</i></strong></div>
+              </div>
+            </div>
+        </div>
+
+        <div class="attribution">
+            Challenge by
+            <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                >Frontend Mentor</a
+            >. Coded by <a href="#">Your Name Here</a>.
+        </div>
+    </body>
 </html>
