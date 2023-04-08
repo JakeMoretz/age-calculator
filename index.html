@@ -23,7 +23,11 @@
             <div class="top-section">
                 <div class="day">
                     <label for="day">DAY</label>
-                    <input type="text" id="day" class="input" name="day" placeholder="DD" />
+                    <input type="number" 
+                        id="day" 
+                        class="input" 
+                        name="day" 
+                        placeholder="DD" />
                 </div>
 
                 <div class="month">
@@ -41,7 +45,7 @@
                     <label for="year">YEAR</label>
                     <input
                         type="text"
-                        id="year"
+                        id="userYear"
                         class="input"
                         name="year"
                         placeholder="YYYY"
@@ -57,21 +61,23 @@
            
             <div class="current">
               <div class="currentYear">
-                  <div class="currentYearData">- -</div>
-                    <div>years</div>
+                  <div id="currentYearData"><i><strong>- -</div>
+                    <div>years</strong></i></div>
               </div>
 
               <div class="currentMonth">
-                  <div class="currentMonthData"><i><strong>- -</div>
-                    <div>months</i></strong></div>
+                  <div id="currentMonthData"><i><strong>- -</div>
+                    <div>months</strong></i></div>
               </div>
 
               <div class="currentDay">
-                <div class="currentDayData"><i><strong>- -</div>
-                <div>days</i></strong></div>
+                <div id="currentDayData"><i><strong>- -</div>
+                <div>days</strong></i></div>
               </div>
             </div>
         </div>
+
+        <button id="btn1">SUBMIT</button>
 
         <div class="attribution">
             Challenge by
