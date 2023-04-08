@@ -102,17 +102,17 @@ hr {
     line-height: 110px;
 }
 
-.currentYearData {
+#currentYearData {
     color: rgb(136, 46, 232);
     padding-right: 20px;
 }
 
-.currentMonthData {
+#currentMonthData {
     color: rgb(136, 46, 232);
     padding-right: 20px;
 }
 
-.currentDayData {
+#currentDayData {
     color: rgb(136, 46, 232);
     padding-right: 20px;
 }
