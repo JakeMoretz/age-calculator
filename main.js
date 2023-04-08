@@ -1,73 +1,36 @@
+function calculateAge() {
+    let birthYear = document.getElementById("userYear").value;
+    let birthMonth = document.getElementById("userMonth").value;
+    let birthDay = document.getElementById("userDay").value;
 
-// // birth dates
-// let birthYear = document.querySelector("#userYear").value;
-// let birthMonth = document.getElementById("month").value;
-// let birthDay = document.getElementById("day").value;
+    let currentDate = new Date();
+    let currentYear = currentDate.getFullYear();
+    let currentMonth = currentDate.getMonth() + 1;
+    let currentDay = currentDate.getDate();
 
-// // storing the current date
-// let date = new Date();
-// let currentDay = date.getDate();
-// let currentMonth = date.getMonth();
-// let currentYear = date.getFullYear();
+    let years = currentYear - birthYear;
+    let months = currentMonth - birthMonth;
+    let days = currentDay - birthDay;
 
-// //output
+    if (days < 0) {
+        months--;
+        let daysInLastMonth = new Date(
+            currentYear,
+            currentMonth - 1,
+            0
+        ).getDate();
+        days = daysInLastMonth + days;
+    }
+    if (months < 0) {
+        years--;
+        months = 12 + months;
+    }
 
-// let d = currentDay - birthDay;
-// let m = currentMonth - birthMonth;
-// let y = currentYear - birthYear;
-
-
-// const input = document.querySelector("input");
-// const button = document.getElementById("btn1");
-// let output1 = document.querySelector("#currentYearData");
-// let output2 = document.querySelector("#currentMonthData");
-
-
-
-
-// button.addEventListener("click", function () {
-//     console.log(birthYear);
-// })
-    
-    
-    
-    // document.querySelector("currentDayData").textContent = "hello";
-    // document.querySelector("currentDayData").textContent = d;
-    // document.querySelector("currentYearData").textContent = "hello";
-
-
-
-
-
-
-
-// let month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-
-// if (birthDay > currentDay){
-//     currentDay = currentDay + month[currentMonth -1];
-//     currentMonth = currentMonth - 1;
-// }
-// if (birthMonth > currentMonth){
-//     currentMonth = currentMonth + 12;
-//     currentYear = currentYear - 1;
-// }
-
-
-
-// this works
-let button = document.querySelector('#btn1');
-let userBirthYear = document.querySelector("#userYear");
-let birthYear = ''
-
-function year() {
-    bYear = userBirthYear.value;
+    console.log(years);
+    console.log(months);
+    console.log(days);
 }
 
-userBirthYear.addEventListener('input', year) 
+const button = document.querySelector("#btn1");
 
-function myFunction () {
-    console.log(bYear);
-}
-
-button.addEventListener("click", myFunction);
-
+button.addEventListener("click", calculateAge);
