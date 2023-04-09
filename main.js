@@ -1,3 +1,7 @@
+let years = "";
+let months = "";
+let days = "";
+
 function calculateAge() {
     let birthYear = document.getElementById("userYear").value;
     let birthMonth = document.getElementById("userMonth").value;
@@ -26,11 +30,20 @@ function calculateAge() {
         months = 12 + months;
     }
 
-    console.log(years);
-    console.log(months);
-    console.log(days);
+    return [years, months, days];
 }
 
 const button = document.querySelector("#btn1");
+const input = document.querySelector("input");
 
-button.addEventListener("click", calculateAge);
+const yearData = document.querySelector("#currentYearData");
+const monthData = document.querySelector("#currentMonthData");
+const dayData = document.querySelector("#currentDayData");
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        yearData.textContent = calculateAge()[0];
+        monthData.textContent = calculateAge()[1];
+        dayData.textContent = calculateAge()[2];
+    }
+});
