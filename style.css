@@ -125,7 +125,6 @@ hr {
     gap: 30px;
 }
 
-.error {
-    color: red;
-    text-align: center;
-}
+/* input:required {
+    border: 1px solid red;
+} */
