@@ -21,37 +21,48 @@
     <body>
         <div class="container">
             <div class="top-section">
-                <div class="day">
-                    <label for="day">DAY</label>
-                    <input type="text" 
-                        id="userDay" 
-                        class="input" 
-                        name="day" 
-                        placeholder="DD" />
-                </div>
+                <form id="form" action="" class="form">
+                    <div class="day">
+                        <label for="day">DAY</label>
+                        <input type="text" 
+                            id="userDay" 
+                            class="input" 
+                            name="day" 
+                            placeholder="DD" 
+                            maxlength="2" 
+                            required/>
+                            <span class="dayError" style="color: red;"></span>
+                    </div>
 
-                <div class="month">
-                    <label for="month">MONTH</label>
-                    <input
-                        type="text"
-                        id="userMonth"
-                        class="input"
-                        name="month"
-                        placeholder="MM"
-                    />
-                </div>
+                    <div class="month">
+                        <label for="month">MONTH</label>
+                        <input
+                            type="text"
+                            id="userMonth"
+                            class="input"
+                            name="month"
+                            placeholder="MM"
+                            maxlength="2" 
+                            required />
+                            <span class="monthError" style="color: red;"></span>
+                        
+                    </div>
 
-                <div class="year">
-                    <label for="year">YEAR</label>
-                    <input
-                        type="text"
-                        id="userYear"
-                        class="input"
-                        name="year"
-                        placeholder="YYYY"
-                    />
-                </div>
+                    <div class="year">
+                        <label for="year">YEAR</label>
+                        <input
+                            type="text"
+                            id="userYear"
+                            class="input"
+                            name="year"
+                            placeholder="YYYY"
+                            maxlength="4" 
+                            required/>
+                            <span class="yearError" style="color: red;"></span>
+                    </div>
+                </form>
             </div>
+       
 
             <div class="imgArrow">
                 <hr />
