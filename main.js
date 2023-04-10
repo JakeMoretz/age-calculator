@@ -40,8 +40,61 @@ const yearData = document.querySelector("#currentYearData");
 const monthData = document.querySelector("#currentMonthData");
 const dayData = document.querySelector("#currentDayData");
 
+//// validation
+
+function validateFormDay() {
+    let errorDay = document.querySelector(".dayError");
+    let birthDay = document.getElementById("userDay").value;
+
+    if (birthDay === "") {
+        errorDay.textContent = "This Field is required";
+    }
+    if (birthDay > 31 || birthDay <= 0) {
+        errorDay.textContent = "Must be a valid date";
+    } else {
+        errorDay.textContent = "";
+    }
+}
+
+function validateFormMonth() {
+    let errorMonth = document.querySelector(".monthError");
+    let birthMonth = document.getElementById("userMonth").value;
+
+    if (birthMonth === "") {
+        errorMonth.textContent = "This field is required";
+    }
+    if (birthMonth > 12 || birthMonth <= 0) {
+        errorMonth.textContent = "Must be a valid Month";
+    } else {
+        errorMonth.textContent = "";
+    }
+}
+
+// function validateFormYear() {
+//     let errorYear = document.querySelector(".yearError");
+//     let birthYear = document.getElementById("userYear").value;
+//     let currentYear = currentDate.getFullYear();
+
+//     if (birthYear === "") {
+//         errorYear.textContent = "This field is required";
+//     }
+//     if (birthYear > currentYear){
+//         errorYear.textContent = "Must be in the Past";
+//     }
+//     if (birthYear <= 1900) {
+//         errorYear.textContent = "Must be a valid BirthYear";
+//     } else {
+//         errorYear.textContent = "";
+//     }
+// }
+
+////////
+
 document.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
+        validateFormDay();
+        validateFormMonth();
+        // validateFormYear();
         yearData.textContent = calculateAge()[0];
         monthData.textContent = calculateAge()[1];
         dayData.textContent = calculateAge()[2];
