@@ -6,7 +6,7 @@ body {
     min-height: 100vh;
     display: grid;
     place-items: center;
-    background-color: rgb(238, 237, 237);
+    background-color: rgb(5, 5, 5);
 }
 
 .container {
@@ -14,7 +14,7 @@ body {
     width: 700px;
     border-radius: 1.5em;
     border-bottom-right-radius: 200px;
-    background-color: white;
+    background-color: rgb(70, 70, 70);
 }
 
 
@@ -26,20 +26,23 @@ body {
     margin-left: 50px;
     gap: 30px;
     padding-top: 30px;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
 }
 
 input {
     height: 65px;
     border-radius: 10px;
     padding-left: 20px;
-    border: 2px solid rgb(0, 0, 0, 0.2);
+    border: 2px solid rgba(248, 248, 248, 0.2);
     width: 130px;
     font-size: 30px;
+    background-color: rgb(34, 34, 34);
 }
 
 input::placeholder {
     font-size: 30px;
+    color: aliceblue;
+    background-color: rgb(34, 34, 34);
 }
 
 label {
@@ -51,20 +54,38 @@ label {
 .day {
     display: flex;
     flex-direction: column;
+    color: aliceblue;
 }
 
 .month {
     display: flex;
     flex-direction: column;
+    color: aliceblue;
 }
 
 .year {
     display: flex;
     flex-direction: column;
+    color: aliceblue;
 }
 
+#year1 {
+    font-size: 20px;
+}
+
+#month1 {
+    font-size: 20px;
+}
+
+#day1 {
+    font-size: 20px;
+}
+
+
+
+
 img {
-    background-color: rgb(136, 46, 232);
+    background-color: rgb(1, 190, 190);
     border-radius: 50px;
     height: 50px;
     padding: 20px;
@@ -77,23 +98,28 @@ hr {
     width: 80%;
     margin-left: 50px;
     margin-right: 60px;
-    border: 1px solid rgb(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .currentYear {
     display: flex;
     font-size: 6em;
+    color: rgb(223, 222, 222);
 }
 
 .currentMonth {
     display: flex;
     font-size: 6em;
+    color:  rgb(223, 222, 222);
 }
 
 .currentDay {
     display: flex;
     font-size: 6em;
+    color:  rgb(223, 222, 222);
 }
+
+
 
 .current {
     display: flex;
@@ -104,18 +130,26 @@ hr {
 }
 
 #currentYearData {
-    color: rgb(136, 46, 232);
+    color: rgb(1, 190, 190);
     padding-right: 20px;
 }
 
 #currentMonthData {
-    color: rgb(136, 46, 232);
+    color: rgb(1, 190, 190);
     padding-right: 20px;
 }
 
 #currentDayData {
-    color: rgb(136, 46, 232);
+    color: rgb(1, 190, 190);
     padding-right: 20px;
+}
+
+.attribution  {
+    color: rgb(190, 191, 193);
+}
+
+a {
+    color: rgb(1, 190, 190);
 }
 
 /* validation */
