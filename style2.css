@@ -1,0 +1,91 @@
+@media screen and (max-width: 1100px) {
+    .container {
+        width: 60vw;
+        height: 70vh;
+    }
+
+    body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: rgb(238, 237, 237);
+    }
+
+    .top-section {
+        margin-right: 10px;
+        margin-left: 10px;
+        justify-content: center;
+    }
+
+    hr {
+        margin-top: 60px;
+        width: 84%;
+        margin-right: 50px;
+    }
+
+    img {
+        position: absolute;
+        top: 34%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .currentYear {
+        font-size: 5em;
+    }
+
+    .currentMonth {
+        font-size: 5em;
+    }
+
+    .currentDay {
+        font-size: 5em;
+    }
+
+    .current {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+
+    .container {
+        width: 480px;
+        height: 65vh
+    }
+
+    .currentYear {
+        font-size: 4.3em;
+    }
+
+    .currentMonth {
+        font-size: 4.3em;
+    }
+
+    .currentDay {
+        font-size: 4.3em;
+    }
+
+    .current {
+        margin-top: 70px;
+        line-height: 100px;
+    }
+
+    img {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+   input {
+    width: 100px;
+   }
+
+    
+}
