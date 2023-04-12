@@ -36,9 +36,9 @@ function calculateAge() {
 const button = document.querySelector("#btn1");
 const input = document.querySelector("input");
 
-const yearData = document.querySelector("#currentYearData");
-const monthData = document.querySelector("#currentMonthData");
-const dayData = document.querySelector("#currentDayData");
+let yearData = document.querySelector("#currentYearData");
+let monthData = document.querySelector("#currentMonthData");
+let dayData = document.querySelector("#currentDayData");
 
 //// validation
 
@@ -48,12 +48,14 @@ function validateFormDay() {
 
     if (birthDay === "") {
         errorDay.textContent = "This Field is required";
+        dayData.textContent = "- -";
         document.querySelector("#day1").style.color = "rgb(196, 59, 59)";
         document.querySelector(".input1").style.outline =
             "1px solid rgb(196, 59, 59)";
     }
     if (birthDay > 31 || birthDay <= 0) {
         errorDay.textContent = "Must be a valid date";
+        dayData.textContent = "- -";
         document.querySelector("#day1").style.color = "rgb(196, 59, 59)";
         document.querySelector(".input1").style.outline =
             "1px solid rgb(196, 59, 59)";
@@ -61,6 +63,7 @@ function validateFormDay() {
         document.querySelector("#day1").style.color = "white";
         document.querySelector(".input1").style.outline = "none";
         errorDay.textContent = "";
+        dayData.textContent = calculateAge()[2];
     }
 }
 
@@ -70,12 +73,14 @@ function validateFormMonth() {
 
     if (birthMonth === "") {
         errorMonth.textContent = "This field is required";
+        monthData.textContent = "- -";
         document.querySelector("#month1").style.color = "rgb(196, 59, 59)";
         document.querySelector(".input2").style.outline =
             "1px solid rgb(196, 59, 59)";
     }
     if (birthMonth > 12 || birthMonth <= 0) {
         errorMonth.textContent = "Must be a valid Month";
+        monthData.textContent = "- -";
         document.querySelector("#month1").style.color = "rgb(196, 59, 59)";
         document.querySelector(".input2").style.outline =
             "1px solid rgb(196, 59, 59)";
@@ -83,6 +88,7 @@ function validateFormMonth() {
         document.querySelector("#month1").style.color = "white";
         document.querySelector(".input2").style.outline = "none";
         errorMonth.textContent = "";
+        monthData.textContent = calculateAge()[1];
     }
 }
 
@@ -94,12 +100,14 @@ function validateFormYear() {
 
     if (birthYear === "") {
         errorYear.textContent = "This field is required";
+        yearData.textContent = "- -";
         document.querySelector("#year1").style.color = "rgb(196, 59, 59)";
         document.querySelector(".input3").style.outline =
             "1px solid rgb(196, 59, 59)";
     }
     if (birthYear <= 1899 || birthYear > currentYear) {
         errorYear.textContent = "Must be a valid BirthYear";
+        yearData.textContent = "- -";
         document.querySelector("#year1").style.color = "rgb(196, 59, 59)";
         document.querySelector(".input3").style.outline =
             "1px solid rgb(196, 59, 59)";
@@ -107,6 +115,7 @@ function validateFormYear() {
         document.querySelector("#year1").style.color = "white";
         document.querySelector(".input3").style.outline = "none";
         errorYear.textContent = "";
+        yearData.textContent = calculateAge()[0];
     }
 }
 
@@ -117,8 +126,5 @@ document.addEventListener("keydown", function (event) {
         validateFormDay();
         validateFormMonth();
         validateFormYear();
-        yearData.textContent = calculateAge()[0];
-        monthData.textContent = calculateAge()[1];
-        dayData.textContent = calculateAge()[2];
     }
 });
